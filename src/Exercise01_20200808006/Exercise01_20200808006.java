@@ -172,5 +172,25 @@ public class Exercise01_20200808006 {
         }
         System.out.println(accountValue);
 
+
+
+        /*
+        11. Body Mass Index (BMI) is measure of health on weight. It can be calculated by taking your weight
+        in kilograms and dividing by the square of your height int meters.
+        Write a program that prompts the user to enter a weight in pounds and height in inches and
+        displays the BMI. One pound is 0.45359237 kilograms, and one inch is 0.0254 meters
+         */
+        double weightInPounds = scanner.nextDouble();
+        double heightInInches = scanner.nextDouble();
+        double weightInKilograms = weightInPounds*0.45359237;
+        double heightInMeters = heightInInches*0.0254;
+
+        double bmi = weightInKilograms/(heightInMeters*heightInMeters);
+        System.out.println(bmi);
+
+
+
+
+
     }
 }

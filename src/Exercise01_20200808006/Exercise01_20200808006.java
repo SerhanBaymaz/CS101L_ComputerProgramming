@@ -19,5 +19,17 @@ public class Exercise01_20200808006 {
 
 
 
+           /*
+           2. Write a program that displays the result of:
+                    (9.5 𝑥 4.5 − 2.5 𝑥 3) /  (45.5 − 3.5)
+            */
+        double nominator = (9.5*4.5)-(3*2.5);
+        double denominator = (45.5 - 3.5);
+        double result = nominator/denominator;
+        System.out.println(result);
+
+
+
+
     }
 }

@@ -127,6 +127,20 @@ public class Exercise01_20200808006 {
 
 
 
+        /*
+        8.Write a program that reads an integer between 0 and 1000 and adds all the digits in the integer.
+            For example, if an integer is 932, the sum of all its digits is 14. (Hint: use % operator to extract
+        digits and use / operator to remove the extracted digit.)
+         */
+        int number = scanner.nextInt();
+        int firstDigit = number%10;
+        int secondDigit = (number/10)%10;
+        int thirdDigit = (number/100)%10;
+        int sumOfDigits = firstDigit+secondDigit+thirdDigit;
+        System.out.println(sumOfDigits);
+
+
+
 
     }
 }

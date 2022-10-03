@@ -101,7 +101,7 @@ public class Exercise01_20200808006 {
 
 
             /*
-            Write a program that reads a Celsius degree in a double value from the console, then convert it
+            6. Write a program that reads a Celsius degree in a double value from the console, then convert it
             to Fahrenheit and display the result. The formula for the conversion is as follows:
                  𝐹𝑎ℎ𝑟𝑒𝑛ℎ𝑒𝑖𝑡 = ( (9/5)*celcius ) +32
              */
@@ -109,6 +109,21 @@ public class Exercise01_20200808006 {
         double celcius = scanner.nextDouble();
         double fahrenheit = ((1.8)*celcius)+32;
         System.out.println(fahrenheit);
+
+
+
+            /*
+                7. Write a program that reads in the radius and length of a cylinder and computes the area and
+                    volume using the following formulas:
+                        𝑎𝑟𝑒𝑎 = 𝑟𝑎𝑑𝑖𝑢𝑠 ∗ 𝑟𝑎𝑑𝑖𝑢𝑠 ∗ 𝜋
+                        𝑣𝑜𝑙𝑢𝑚𝑒 = 𝑎𝑟𝑒𝑎 ∗ 𝑙𝑒𝑛𝑔𝑡ℎ
+             */
+        double radiusOfCylinder = scanner.nextDouble();
+        double lengthOfCylinder = scanner.nextDouble();
+        double areaOfCylinder = radiusOfCylinder*radiusOfCylinder*Math.PI;
+        double volumeOfCylinder = areaOfCylinder*lengthOfCylinder;
+        System.out.println(areaOfCylinder);
+        System.out.println(volumeOfCylinder);
 
 
 

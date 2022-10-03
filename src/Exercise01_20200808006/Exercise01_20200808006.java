@@ -154,6 +154,23 @@ public class Exercise01_20200808006 {
 
 
 
+        /*
+        10.Suppose you save $100 each month into a saving account with the annual interest rate 5%. Thus,
+        the monthly interest rate is 0.05/12. After the first month the value in the account becomes
+                    100 * (1 + 0.05/12) = 100,417
+        After the second month, the value in the account becomes
+                    (100 + 100.417) * (1 + 0.05/12) = 201,252
+        And so on.
+
+            Write a program that prompts the user to enter a monthly saving amount and displays the
+        account value after the sixth month
+         */
+        double monthlySavingAmount = scanner.nextDouble();
+        double accountValue = monthlySavingAmount;
+        for (int i = 1; i <7 ; i++) {
+            accountValue = (accountValue+monthlySavingAmount)*(1+0.05/12);
+        }
+        System.out.println(accountValue);
 
     }
 }

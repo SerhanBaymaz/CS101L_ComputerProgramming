@@ -204,7 +204,23 @@ public class Exercise01_20200808006 {
 
 
 
+        /*
+        13. Write a program that prompts the user to enter three points (x1, y1), (x2, y2), (x3, y3) of a
+            triangle and display its area. The formula for computing the area of a triangle is
+         */
+        double x_1 = scanner.nextDouble();
+        double y_1 = scanner.nextDouble();
+        double x_2 = scanner.nextDouble();
+        double y_2 = scanner.nextDouble();
+        double x_3 = scanner.nextDouble();
+        double y_3 = scanner.nextDouble();
 
+        double side1 = Math.pow(Math.pow(x_2-x_1,2)+Math.pow(y_2-y_1,2),0.5);
+        double side2 = Math.pow(Math.pow(x_3-x_2,2)+Math.pow(y_3-y_2,2),0.5);
+        double side3 = Math.pow(Math.pow(x_1-x_3,2)+Math.pow(y_1-y_3,2),0.5);
+        double s = (side1+side2+side3)/2;
+        double area_1 = Math.pow(s*(s-side1)*(s-side2)*(s-side3),0.5);
+        System.out.println(area_1);
 
     }
 }

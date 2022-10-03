@@ -190,6 +190,20 @@ public class Exercise01_20200808006 {
 
 
 
+        /*
+            12. Write a program that prompts the user to enter two points (x1, y1) and (x2, y2) and displays
+        their distance between them. (Hint: you can use Math.pow(a, 0.5) to compute √𝑎)
+         */
+        double x1 = scanner.nextDouble();
+        double y1 = scanner.nextDouble();
+        double x2 = scanner.nextDouble();
+        double y2 = scanner.nextDouble();
+
+        double distance = Math.pow(Math.pow(x2-x1,2)+Math.pow(y2-y1,2),0.5);
+        System.out.println(distance);
+
+
+
 
 
     }

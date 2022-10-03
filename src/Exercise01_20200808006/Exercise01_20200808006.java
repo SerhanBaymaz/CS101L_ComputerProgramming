@@ -1,5 +1,7 @@
 package Exercise01_20200808006;
 
+import java.util.Scanner;
+
 public class Exercise01_20200808006 {
 
     public static void main(String[] args) {
@@ -14,7 +16,7 @@ public class Exercise01_20200808006 {
             */
         System.out.println("a    a^2    a^3");
         for (int a = 1; a <5 ; a++) {
-            System.out.println(a+"    "+(a*a)+"    "+(+a*a*a));
+            System.out.println(a+"    "+(a*a)+"    "+(a*a*a));
         }
 
 
@@ -95,6 +97,18 @@ public class Exercise01_20200808006 {
 
         System.out.println(x);
         System.out.println(y);
+
+
+
+            /*
+            Write a program that reads a Celsius degree in a double value from the console, then convert it
+            to Fahrenheit and display the result. The formula for the conversion is as follows:
+                 𝐹𝑎ℎ𝑟𝑒𝑛ℎ𝑒𝑖𝑡 = ( (9/5)*celcius ) +32
+             */
+        Scanner scanner = new Scanner(System.in);
+        double celcius = scanner.nextDouble();
+        double fahrenheit = ((1.8)*celcius)+32;
+        System.out.println(fahrenheit);
 
 
 

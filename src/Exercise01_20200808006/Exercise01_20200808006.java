@@ -43,7 +43,8 @@ public class Exercise01_20200808006 {
             afterThe4TimesPart1 = afterThe4TimesPart1 + (2/(n*(n+2)));
                 n = n+4;
         }
-        System.out.println(4*afterThe4TimesPart1);
+        double pi1 = 4*afterThe4TimesPart1;
+        System.out.println(pi1);
 
 
         double afterThe4TimesPart2 = 0;
@@ -52,7 +53,20 @@ public class Exercise01_20200808006 {
             afterThe4TimesPart2 = afterThe4TimesPart2 + (2/(m*(m+2)));
             m = m+4;
         }
-        System.out.println(4*afterThe4TimesPart2);
+        double pi2 = 4*afterThe4TimesPart2;
+        System.out.println(pi2);
+
+
+
+
+          /*
+            4. Write a program that displays the area and perimeter of a circle that has a radius of 5.5
+            using the π you have calculated in question 3
+          */
+        double radius = 5.5;
+        double area = pi2*radius*radius;
+        System.out.println(area);
+        System.out.println(2*radius);
 
 
 

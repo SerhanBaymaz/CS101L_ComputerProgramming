@@ -141,6 +141,19 @@ public class Exercise01_20200808006 {
 
 
 
+        /*
+        9. Write a program that prompts the user to enter the minutes (e.g. 1 billion) and display the
+            number of years and days for the minutes.
+         */
+        int minutes = scanner.nextInt();
+        int years = minutes/(365*24*60);
+        int days = (minutes%(365*24*60))/(24*60);
+        System.out.println(years);
+        System.out.println(days);
+
+
+
+
 
     }
 }

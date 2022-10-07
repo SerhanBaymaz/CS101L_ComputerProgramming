@@ -55,5 +55,34 @@ public class Week3_101L {
         }
 
 
+
+        /*
+                3. At a playground, all children aged 10 or over are allowed to ride bicycle. For children under 10,
+        they can only ride the bicycle if their height is over 120cm. Write a program that asks the user for
+        their age and prints if they are allowed on the ride or not.
+        Note: You should only ask the user for their height if this is required for your code to make a
+        decision
+         */
+
+        Scanner scanner3 = new Scanner(System.in);
+        System.out.print("Please enter your age :");
+        int age = scanner3.nextInt();
+        if (age>=10){
+            System.out.println("You are allowed to ride the bicycle");
+        }else{
+            System.out.print("Please enter your height :");
+            int height = scanner3.nextInt();
+            if (height>120){
+                System.out.println("You are allowed to ride the bicycle");
+            }else{
+                System.out.println("You are not allowed to ride the bicycle");
+            }
+        }
+
+
+
+        /*
+
+         */
     }
 }

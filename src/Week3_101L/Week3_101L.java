@@ -21,15 +21,9 @@ public class Week3_101L {
 
 
         /*
-                2. The two roots of a quadratic equation 𝑎𝑥2 + 𝑏𝑥 + 𝑐 = 0 can be obtained using the following
+         2. The two roots of a quadratic equation 𝑎𝑥2 + 𝑏𝑥 + 𝑐 = 0 can be obtained using the following
         formula:
-        𝑟1 =
-        −𝑏 + √𝑏2 − 4𝑎𝑐
-        2𝑎
-        𝑟2 =
-        −𝑏 − √𝑏2 − 4𝑎𝑐
-        2𝑎
-        𝑏2 − 4𝑎𝑐 is called the discriminant of the quadratic equation. If it is positive, the equation has
+         is called the discriminant of the quadratic equation. If it is positive, the equation has
         two real roots. If it is zero, the equation has one root. If it is negative, the equation has no real
         roots.
         Write a program that prompts the user to enter values for a, b and c and displays the result

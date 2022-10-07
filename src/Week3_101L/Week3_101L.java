@@ -82,7 +82,49 @@ public class Week3_101L {
 
 
         /*
-
+        4. Write a program that plays rock-paper-scissors with the user. Generate a random integer that
+can be 1, 2 or 3. Rock is represented with 1, paper is represented with 2 and scissors is
+represented with 3. Ask the user to enter their choice and display the results to user. If user
+enters anything other than 1, 2 or 3, print an error message
          */
+
+        Scanner scanner4 = new Scanner(System.in);
+        System.out.print("Please enter your choice (1 for rock, 2 for paper, 3 for scissors) :");
+        int choice = scanner4.nextInt();
+        int computerChoice = (int)(Math.random()*3)+1;
+
+        if (choice==1){
+            if (computerChoice==1){
+                System.out.println("You chose rock and computer chose rock. It is a draw");
+            }else if (computerChoice==2){
+                System.out.println("You chose rock and computer chose paper. Computer wins");
+            }else{
+                System.out.println("You chose rock and computer chose scissors. You win");
+            }
+        }else if (choice==2){
+            if (computerChoice==1){
+                System.out.println("You chose paper and computer chose rock. You win");
+            }else if (computerChoice==2){
+                System.out.println("You chose paper and computer chose paper. It is a draw");
+            }else{
+                System.out.println("You chose paper and computer chose scissors. Computer wins");
+            }
+        }else if (choice==3){
+            if (computerChoice==1){
+                System.out.println("You chose scissors and computer chose rock. Computer wins");
+            }else if (computerChoice==2){
+                System.out.println("You chose scissors and computer chose paper. You win");
+            }else{
+                System.out.println("You chose scissors and computer chose scissors. It is a draw");
+            }
+        }else{
+            System.out.println("You have entered an invalid choice");
+        }
+
+
+
+
+
+
     }
 }

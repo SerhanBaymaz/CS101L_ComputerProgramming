@@ -123,7 +123,35 @@ enters anything other than 1, 2 or 3, print an error message
 
 
 
+        /*
+        5. Write a program that calculates the grade of a student, given final, midterm, quiz1 and quiz2
+exams. If student’s score is bigger than 90, student’s grade is A, if it is less than 90 and greater
+than 80 grade is B.
+Calculate the grades until 50
+         */
 
+        Scanner scanner5 = new Scanner(System.in);
+        System.out.print("Please enter your final exam score :");
+        int finalExam = scanner5.nextInt();
+        System.out.print("Please enter your midterm exam score :");
+        int midtermExam = scanner5.nextInt();
+        System.out.print("Please enter your quiz1 score :");
+        int quiz1 = scanner5.nextInt();
+        System.out.print("Please enter your quiz2 score :");
+        int quiz2 = scanner5.nextInt();
+
+        int totalScore = finalExam+midtermExam+quiz1+quiz2;
+        if (totalScore>90){
+            System.out.println("Your grade is A");
+        }else if (totalScore>80){
+            System.out.println("Your grade is B");
+        }else if (totalScore>70){
+            System.out.println("Your grade is C");
+        }else if (totalScore>60){
+            System.out.println("Your grade is D");
+        }else{
+            System.out.println("Your grade is F");
+        }
 
 
     }

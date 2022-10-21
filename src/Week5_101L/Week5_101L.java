@@ -105,6 +105,25 @@ public class Week5_101L {
 
 
         //5.QUESTİON
+        //5. Task: Write a program that prompts user to enter two strings and reports whether the second
+        //string is a substring of the first string.
+        //Test:
+        //Enter string s1: ABCD
+        //Enter string s2: BC
+        //Expected Output: BC is substring of ABCD
+
+        System.out.print("Enter string s1: ");
+        Scanner scanner3 = new Scanner(System.in);
+        String s1 = scanner3.nextLine();
+        System.out.print("Enter string s2: ");
+        String s2 = scanner3.nextLine();
+        if (s1.contains(s2)) {
+            System.out.println(s2 + " is substring of " + s1);
+        } else {
+            System.out.println(s2 + " is not substring of " + s1);
+        }
+
+        //6.QUESTİON
 
 
         System.out.println();

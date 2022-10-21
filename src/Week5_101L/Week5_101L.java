@@ -105,12 +105,7 @@ public class Week5_101L {
 
 
         //5.QUESTİON
-        //5. Task: Write a program that prompts user to enter two strings and reports whether the second
-        //string is a substring of the first string.
-        //Test:
-        //Enter string s1: ABCD
-        //Enter string s2: BC
-        //Expected Output: BC is substring of ABCD
+
 
         System.out.print("Enter string s1: ");
         Scanner scanner3 = new Scanner(System.in);
@@ -124,6 +119,31 @@ public class Week5_101L {
         }
 
         //6.QUESTİON
+        System.out.print("Enter an integer, the input ends if it is 0: ");
+        Scanner scanner4 = new Scanner(System.in);
+        int number = scanner4.nextInt();
+        int positive = 0;
+        int negative = 0;
+        int total = 0;
+        int count = 0;
+        double average = 0;
+        while (number != 0) {
+            if (number > 0) {
+                positive++;
+            } else {
+                negative++;
+            }
+            total += number;
+            count++;
+            number = scanner4.nextInt();
+        }
+        average = (double) total / count;
+        System.out.println("The number of positives is " + positive);
+        System.out.println("The number of negatives is " + negative);
+        System.out.println("The total is " + total);
+        System.out.println("The average is " + average);
+
+        //7.QUESTİON
 
 
         System.out.println();

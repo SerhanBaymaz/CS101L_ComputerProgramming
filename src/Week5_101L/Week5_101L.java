@@ -159,6 +159,18 @@ public class Week5_101L {
 
 
         //8.QUESTİON
+        System.out.print("Enter a number: ");
+        Scanner scanner6 = new Scanner(System.in);
+        int x = scanner6.nextInt();
+        double pi = 0;
+        for (int i = 1; i <= x; i++) {
+            pi += Math.pow(-1, i + 1) / (2 * i - 1);
+        }
+        pi = 4 * pi;
+        System.out.println(pi);
+
+
+
 
 
 

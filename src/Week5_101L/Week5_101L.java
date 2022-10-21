@@ -105,8 +105,6 @@ public class Week5_101L {
 
 
         //5.QUESTİON
-
-
         System.out.print("Enter string s1: ");
         Scanner scanner3 = new Scanner(System.in);
         String s1 = scanner3.nextLine();
@@ -117,6 +115,9 @@ public class Week5_101L {
         } else {
             System.out.println(s2 + " is not substring of " + s1);
         }
+
+
+
 
         //6.QUESTİON
         System.out.print("Enter an integer, the input ends if it is 0: ");
@@ -143,7 +144,23 @@ public class Week5_101L {
         System.out.println("The total is " + total);
         System.out.println("The average is " + average);
 
+
+
+
+
         //7.QUESTİON
+        System.out.print("Enter a number: ");
+        Scanner scanner5 = new Scanner(System.in);
+        int n = scanner5.nextInt();
+        System.out.println("a a^2 a^3");
+        for (int i = 1; i <= n; i++) {
+            System.out.println(i + " " + i * i + " " + i * i * i);
+        }
+
+
+        //8.QUESTİON
+
+
 
 
         System.out.println();

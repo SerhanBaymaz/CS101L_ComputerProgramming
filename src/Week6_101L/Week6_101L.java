@@ -54,6 +54,31 @@ public class Week6_101L {
     }
 
 
+    //5.QUESTİON
+    public static int fibonacci(int n) {
+        int f0 = 0;
+        int f1 = 1;
+        int f2 = 1;
+        if (n == 0) {
+            return f0;
+        } else if (n == 1) {
+            return f1;
+        } else if (n == 2) {
+            return f2;
+        } else {
+            System.out.print(f0 + "," + f1 + "," );
+            for (int i = 3; i <= n; i++) {
+                f0 = f1;
+                f1 = f2;
+                f2 = f0 + f1;
+                System.out.print(f2+",");
+            }
+            return f2;
+        }
+    }
+
+
+
 
     public static void main(String[] args) {
 
@@ -62,5 +87,6 @@ public class Week6_101L {
         System.out.println("Is Palindrome : "+isPalindrome(12321));
         System.out.println("Is Palindrome : "+isPalindrome(12345));
         displaySortedNumbers(3.2, 4.5, 1.2);
+        fibonacci(10);
     }
 }

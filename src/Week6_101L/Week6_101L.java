@@ -66,7 +66,7 @@ public class Week6_101L {
         } else if (n == 2) {
             return f2;
         } else {
-            System.out.print(f0 + "," + f1 + "," );
+            System.out.print("Fibonacci numbers are :"+f0 + "," + f1 + "," );
             for (int i = 3; i <= n; i++) {
                 f0 = f1;
                 f1 = f2;
@@ -78,15 +78,44 @@ public class Week6_101L {
     }
 
 
+    //6.QUESTİON
+    public static boolean isPrime(int number) {
+        for (int divisor = 2; divisor <= number / 2; divisor++) {
+            if (number % divisor == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void printPrimeNumbers(int number) {
+        int count = 0;
+        System.out.print("Prime numbers are : ");
+        for (int i = 2; i <= number; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + ",");
+                count++;
+            }
+        }
+        System.out.println();
+        System.out.println("Number of prime numbers is :" + count);
+    }
+
 
 
     public static void main(String[] args) {
 
         System.out.println("Pentagol Number is : "+getPentagonalNumber(10));
+
         System.out.println("Sum of digits : "+sumDigits(123456789));
+
         System.out.println("Is Palindrome : "+isPalindrome(12321));
         System.out.println("Is Palindrome : "+isPalindrome(12345));
+
         displaySortedNumbers(3.2, 4.5, 1.2);
+
         fibonacci(10);
+        System.out.println();
+
+        printPrimeNumbers(100);
     }
 }

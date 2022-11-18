@@ -30,6 +30,17 @@ public class Week7_101L {
     }
 
 
+    //3. Write a method to count all words in a string
+    public static int countWords(String str){
+        int word =0;
+        for (int i = 0; i <str.length()-1 ; i++) {
+            if (str.charAt(i) == ' '){
+                word++;
+            }
+        }
+        return word+1;
+    }
+
 
     public static void main(String[] args) {
         System.out.println("***************************OUTPUT***************************");
@@ -45,6 +56,12 @@ public class Week7_101L {
 
         System.out.println("-------------------------------------------------------------------------------------");
         System.out.println("There are '"+countVowels("Serhan Baymaz I İ ı i") +"' vowels in given String.");
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println();
+
+
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println("There are '"+countWords("Serhan Baymaz 123 abc")+"' words in given String.");
         System.out.println("-------------------------------------------------------------------------------------");
         System.out.println();
 

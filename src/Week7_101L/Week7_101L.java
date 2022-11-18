@@ -17,19 +17,37 @@ public class Week7_101L {
     }
 
 
+    //2. Write a method to count all vowels in a string
+    public static int countVowels(String str){
+        String str1 = str.toUpperCase();
+        int result =0;
+        for (int i = 0; i < str1.length(); i++) {
+            if (str1.charAt(i) =='A' || str1.charAt(i) =='E' ||str1.charAt(i) =='I' ||str1.charAt(i) =='O' ||str1.charAt(i) =='U' ||str1.charAt(i) =='İ')
+                result++;
+        }
 
-
+        return result;
+    }
 
 
 
     public static void main(String[] args) {
         System.out.println("***************************OUTPUT***************************");
 
-
+        System.out.println("-------------------------------------------------------------------------------------");
         middleChar("Serhan");
         middleChar("Ahmet");
         middleChar("12345678");
         middleChar("");
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println();
+
+
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println("There are '"+countVowels("Serhan Baymaz I İ ı i") +"' vowels in given String.");
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println();
+
 
 
 

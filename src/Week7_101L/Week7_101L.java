@@ -42,6 +42,24 @@ public class Week7_101L {
     }
 
 
+    //4. Write a method to check whether an entered string is a valid password
+    //a . Password must have at least eight characters
+    //b . Password must consist of only letters and digit
+    public static boolean isValid(String str){
+        boolean result = true;
+        if (str.length() >= 8){
+            for (int i = 0; i <str.length(); i++) {
+                if(!Character.isDigit(str.charAt(i)) && !Character.isLetter(str.charAt(i))){
+                    return false;
+                }
+            }
+            return true;
+        }else{//if length<8
+            return false;
+        }
+    }
+
+
     public static void main(String[] args) {
         System.out.println("***************************OUTPUT***************************");
 
@@ -66,6 +84,12 @@ public class Week7_101L {
         System.out.println();
 
 
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println("Is your password valid : "+isValid("SerhanBaymaz12"));
+        System.out.println("Is your password valid : "+isValid("SerhanBaymaz12*"));
+        System.out.println("Is your password valid : "+isValid("S"));
+        System.out.println("-------------------------------------------------------------------------------------");
+        System.out.println();
 
 
 

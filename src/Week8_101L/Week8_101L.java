@@ -25,6 +25,18 @@ public class Week8_101L {
     }
 
 
+    //3. Write a method that searches a given array for a given key and returns the index if the given key
+    //exists in the list. If not, returns -1
+    public static int findElement(int[] arr, int key){
+        int index = -1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]==key)
+                index=i;
+        }
+
+        return index;
+    }
+
 
 
 
@@ -33,11 +45,15 @@ public class Week8_101L {
 
         //Q1
         int[] myArray = {1,8,9,6,2,3,5,4,7,8,6,8,8,9};
+        System.out.print("Your array is : ");
         displayArr(myArray);
 
         //Q2
+        System.out.print("Random array is : ");
         displayArr(generateArr(10,36,50));
 
+        //Q3
+        System.out.println("Key in the arrays' index is : "+findElement(myArray,5));
 
 
 

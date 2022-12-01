@@ -107,42 +107,76 @@ public class Week8_101L {
     }
 
 
+    //7. Use selection sort to sort a given array.
+    public static int[] selectionSort(int[] arr){
+        int[] array = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            array[i] = arr[i];
+        }
+
+        for (int i = 0; i < array.length-1; i++) {
+            int min = array[i];
+            int minIndex = i;
+            for (int j = i+1; j < array.length; j++) {
+                if (array[j]<min){
+                    min = array[j];
+                    minIndex = j;
+                }
+            }
+            if (minIndex!=i){
+                array[minIndex] = array[i];
+                array[i] = min;
+            }
+        }
+        return array;
+    }
+
+
+
 
     public static void main(String[] args) {
 
         //Q1
         int[] myArray = {1,2,2,3,3,3,4,4,4,4,9,9,9,14,12,36,96,14,12,14,11};
-        System.out.print("Your array is : ");
+        System.out.print("1)Your array is : ");
         displayArr(myArray);
+        System.out.println("--------------------------------------------------");
 
         //Q2
-        System.out.print("Random array is : ");
+        System.out.print("2)Random array is : ");
         displayArr(generateArr(10,36,50));
+        System.out.println("--------------------------------------------------");
+
 
         //Q3
-        System.out.println("Key in the arrays' index is : "+findElement(myArray,5));
+        System.out.println("3)Key in the arrays' index is : "+findElement(myArray,5));
+        System.out.println("--------------------------------------------------");
+
 
         //Q4
+        System.out.println("4)Occurences of each value in the array : ");
         findOccurences(myArray);
+        System.out.println("--------------------------------------------------");
+
 
         //Q5
+        System.out.print("5)Non-Reversed and reversed arrays are : ");
         displayArr(myArray);
         displayArr(reverseArr(myArray));
+        System.out.println("--------------------------------------------------");
+
 
         //Q6
         Arrays.sort(myArray);
-        System.out.println("Key in the arrays' index is : "+findElementBinary(myArray,11));
+        System.out.println("6)Key in the arrays' index is : "+findElementBinary(myArray,11));
+        System.out.println("--------------------------------------------------");
 
 
-
-
-
-
-
-
-
-
-
+        //Q7
+        System.out.print("7)Before and after the sort : ");
+        displayArr(myArray);
+        displayArr(selectionSort(myArray));
+        System.out.println("--------------------------------------------------");
 
     }
 }

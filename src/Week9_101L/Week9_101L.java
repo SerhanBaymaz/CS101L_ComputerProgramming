@@ -1,5 +1,7 @@
 package Week9_101L;
 
+import java.util.Scanner;
+
 public class Week9_101L {
 
     //0. Write display methods for
@@ -47,6 +49,30 @@ public class Week9_101L {
     }
 
 
+    //2a. Write a method that generates a random char between any given two characters
+    public static char random(char start, char end){
+        int random = (int)(Math.random()*(end-start+1)+start);
+        return (char)random;
+    }
+    //2c. Generate an answer array that represents the correct answers of questions according to
+    //number of questions.
+    public static char[] answerArray(int numberOfQuestions){
+        char[] ansArr = new char[numberOfQuestions];
+        for (int i = 0; i < numberOfQuestions; i++) {
+            ansArr[i] = random('A','E');
+        }
+        return ansArr;
+    }
+    //2.d
+    public static void swap(int[] array, int i, int j){
+        int temp = array[i];
+        array[i]=array[j];
+        array[j]=temp;
+    }
+    //2.e
+    //public static int[] grade(char[][] studentAnswers, char[] correctAnswers){}
+
+
 
 
 
@@ -56,19 +82,71 @@ public class Week9_101L {
 
         int[] array1D = {5,6,7,8,9,10,11,19,85,196};
         int[][] array2D = {{45,12,69},{14,56,48},{32,69,42},{10,11,12}};
-
-
-        //Q0
-        display1DimensionArray(array1D);
-        display2DimensionArray(array2D);
-        System.out.println("----------------------------------------------");
-
-        //Q1
-        System.out.println("Sum of the column is : " + sumColumn(array2D,0));
-        System.out.println("Sum of the row is : " + sumRow(array2D,1));
+        Scanner input = new Scanner(System.in);
+        System.out.print("Please enter the question number ---->");
+        int question = input.nextInt();
         System.out.println("----------------------------------------------");
 
 
+        switch (question){
+            case 0:
+                //Q0
+                display1DimensionArray(array1D);
+                display2DimensionArray(array2D);
+                System.out.println("----------------------------------------------");
+
+                break;
+            case 1:
+                //Q1
+                System.out.println("Sum of the column is : " + sumColumn(array2D,0));
+                System.out.println("Sum of the row is : " + sumRow(array2D,1));
+                System.out.println("----------------------------------------------");
+                break;
+
+            case 2:
+                //Q2
+                System.out.println("Random char between 'A' and 'Z' is : " + random('A','Z'));//Q2a
+
+                //Q2b
+                System.out.print("Enter the number of students : ");
+                int numberOfStudents = input.nextInt();
+                System.out.print("Enter the number of questions : ");
+                int numberOfQuestions = input.nextInt();
+
+                char[][] answers = new char[numberOfStudents][numberOfQuestions];
+                for (int i = 0; i < numberOfStudents; i++) {
+                    for (int j = 0; j < numberOfQuestions; j++) {
+                        answers[i][j] = random('A','E');
+                    }
+                }
+
+
+                //Q2c
+                char[] answerArray=answerArray(numberOfQuestions);
+                System.out.print("Answer array is :");
+                for (int i = 0; i < numberOfQuestions; i++) {
+                    System.out.print(answerArray[i]+",  ");
+                }
+
+                //Q2d
+                //Write a method that given an array and two indexes, swaps elements at those indexes
+                //according to given method header
+                int[] arraySwap = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14};
+                System.out.println("Array before swap :");
+                display1DimensionArray(arraySwap);
+                swap(arraySwap,4,12);
+                System.out.println("Array after swap :");
+                display1DimensionArray(arraySwap);
+
+
+                System.out.println("----------------------------------------------");
+                break;
+
+            case 3:
+
+
+                break;
+        }
 
 
     }

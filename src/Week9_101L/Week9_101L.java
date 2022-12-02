@@ -1,7 +1,5 @@
 package Week9_101L;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -163,8 +161,30 @@ public class Week9_101L {
 
 
 
+    //5. Write a method that generates a matrix randomly filled with 0s and 1s, displays the matrix and
+    //returns the row and column indexes with the most 1s as a pair of two.
+    public static int[] locateMostOnes(int m, int n){
+        int[][] arr =new int[m][n];
+        int maxRow=0;
+        int indexR=0;
 
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = (int) (Math.random()*2);
+            }
+        }
 
+        for (int i = 0; i < m; i++) {
+            if (maxRow<sumRow(arr,i)){
+                maxRow=sumRow(arr,i);
+                indexR=i;
+            }
+        }
+
+        display2DimensionArray(arr);
+
+        return arr[indexR];
+    }
 
 
 
@@ -276,6 +296,13 @@ public class Week9_101L {
                 System.out.println("----------------------------------------------");
                 break;
 
+
+             case 5:
+                 System.out.println("2D array and most 1s are : ");
+                    display1DimensionArray(locateMostOnes(5,5));
+                    System.out.println("----------------------------------------------");
+
+                 break;
 
 
             default:

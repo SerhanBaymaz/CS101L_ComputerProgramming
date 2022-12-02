@@ -93,7 +93,31 @@ public class Week9_101L {
     }
 
 
+    //3.a Overload the random method for int data type.
+    public static int[][] addMatrix(int[][] matrixA, int[][] matrixB){
+        int maxROW = Math.max(matrixA.length,matrixB.length);
+        int maxCOLUMN = Math.max(matrixA[0].length,matrixB[0].length);
 
+        int[][] result = new int[maxROW][maxCOLUMN];
+        for (int i = 0; i < maxROW; i++) {
+            for (int j = 0; j < maxCOLUMN; j++) {
+                result[i][j] = matrixA[i][j] + matrixB[i][j] ;
+            }
+        }
+
+        return result;
+    }
+    //3.b. Write a method that generates a random matrix given its dimensions
+    public static int[][] generateMatrix(int m, int n){
+        int[][] array2d = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                array2d[i][j]=(int) (10+Math.random()*39);
+            }
+        }
+
+        return array2d;
+    }
 
 
 
@@ -171,8 +195,29 @@ public class Week9_101L {
                 break;
 
             case 3:
+                int[][] matrixA = generateMatrix(3,6);
+                int[][] matrixB = generateMatrix(3,6);
+                System.out.println("MatrixA :");
+                display2DimensionArray(matrixA);
+                System.out.println("MatrixB :");
+                display2DimensionArray(matrixB);
+
+                System.out.println("");
+                System.out.println("matrixA+matrixB =");
+                display2DimensionArray(addMatrix(matrixA,matrixB));
+                System.out.println("----------------------------------------------");
+
+                break;
 
 
+            case 4:
+
+                break;
+
+
+
+            default:
+                System.out.println("  Yanlış seçim ! \nLütfen 0,1,2,3,4,5 sayılarından birini tuşlayınız.");
                 break;
         }
 

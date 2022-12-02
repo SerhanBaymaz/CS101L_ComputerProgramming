@@ -1,5 +1,8 @@
 package Week9_101L;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Week9_101L {
@@ -8,7 +11,7 @@ public class Week9_101L {
     //a. Write a method that displays the given array in a single line, tab separated
     //b. Write a method that displays two-dimensional array, each row in a new line
     public static void display1DimensionArray(int[] array){
-        System.out.println("One Dimensional array :    ");
+        //System.out.println("One Dimensional array :    ");
         System.out.print("["+array[0]+"    ");
         for (int i = 1; i <array.length-1 ; i++) {
             System.out.print(array[i]+"    ");
@@ -16,7 +19,7 @@ public class Week9_101L {
         System.out.println(array[array.length-1]+"]\n");
     }
     public static void display2DimensionArray(int[][] array){
-        System.out.println("Two Dimensional array ;");
+        //System.out.println("Two Dimensional array ;");
         for (int i = 0; i < array.length; i++) {
             System.out.print("[");
             for (int j = 0; j < array[0].length; j++) {
@@ -70,7 +73,28 @@ public class Week9_101L {
         array[j]=temp;
     }
     //2.e
-    //public static int[] grade(char[][] studentAnswers, char[] correctAnswers){}
+    public static int[] grade(char[][] studentAnswers, char[] correctAnswers){
+        int grade = 0;
+        int studentNumber = studentAnswers.length;
+
+        int[] gradeList = new int[studentNumber];
+        for (int i = 0; i < studentNumber; i++) {
+            for (int j = 0; j < correctAnswers.length; j++) {
+                if (studentAnswers[i][j] == correctAnswers[j]) {
+                    grade+=10;
+                }
+            }
+            gradeList[i]=grade;
+            grade=0;
+        }
+        Arrays.sort(gradeList);
+
+        return gradeList;
+    }
+
+
+
+
 
 
 
@@ -128,6 +152,7 @@ public class Week9_101L {
                     System.out.print(answerArray[i]+",  ");
                 }
 
+                System.out.println("\n");
                 //Q2d
                 //Write a method that given an array and two indexes, swaps elements at those indexes
                 //according to given method header
@@ -138,6 +163,9 @@ public class Week9_101L {
                 System.out.println("Array after swap :");
                 display1DimensionArray(arraySwap);
 
+                int[] sonuc =grade(answers,answerArray);
+                System.out.print("Final grades of students : ");
+                display1DimensionArray(sonuc);
 
                 System.out.println("----------------------------------------------");
                 break;

@@ -31,6 +31,8 @@ public class Week9_101L {
     }
 
 
+
+
     //1. Write a method that returns the sum of all the elements in a specified
     //a. Column
     //b. Row
@@ -50,6 +52,8 @@ public class Week9_101L {
 
         return sum;
     }
+
+
 
 
     //2a. Write a method that generates a random char between any given two characters
@@ -93,6 +97,8 @@ public class Week9_101L {
     }
 
 
+
+
     //3.a Overload the random method for int data type.
     public static int[][] addMatrix(int[][] matrixA, int[][] matrixB){
         int maxROW = Math.max(matrixA.length,matrixB.length);
@@ -118,6 +124,44 @@ public class Week9_101L {
 
         return array2d;
     }
+
+
+
+
+    //4.a Write a method that returns the index of the point which is closest to a given point from an array
+    //of points in three-dimensional coordinate space. Use a two-dimensional array to represent
+    //points.
+    public static int getClosestPoint(int[][] points, int pointIndex){
+        int closestPoint = 0;
+        int distance = 0;
+        int minDistance = 0;
+        for (int i = 0; i < points.length; i++) {
+            if (i!=pointIndex){
+                distance = (int) Math.sqrt(Math.pow(points[pointIndex][0]-points[i][0],2)+Math.pow(points[pointIndex][1]-points[i][1],2)+Math.pow(points[pointIndex][2]-points[i][2],2));
+                if (i==1){
+                    minDistance = distance;
+                }
+                if (distance<minDistance){
+                    minDistance = distance;
+                    closestPoint = i;
+                }
+            }
+        }
+        return closestPoint;
+    }
+    //4.b Write a round method that rounds any given double to given amount of int decimal
+    //places
+    public static double round(double value, int places){
+        double result = 0;
+        double temp = 0;
+        temp = value*Math.pow(10,places);
+        result = Math.round(temp);
+        result = result/Math.pow(10,places);
+        return result;
+    }
+
+
+
 
 
 
@@ -211,7 +255,25 @@ public class Week9_101L {
 
 
             case 4:
+                int[][] points = {{1,2,3},{4,5,6},{7,8,9},{10,11,12},{13,14,15}};
+                System.out.println("Points :");
+                display2DimensionArray(points);
+                System.out.println();
+                System.out.println("Closest point to point 0 is : " + getClosestPoint(points,0));
+                System.out.println("Closest point to point 1 is : " + getClosestPoint(points,1));
+                System.out.println("Closest point to point 2 is : " + getClosestPoint(points,2));
+                System.out.println("Closest point to point 3 is : " + getClosestPoint(points,3));
+                System.out.println("Closest point to point 4 is : " + getClosestPoint(points,4));
+                System.out.println();
 
+
+                System.out.println("Round 3.1415926535 to 2 decimal places : " + round(3.1415926535,2));
+                System.out.println("Round 3.1415926535 to 3 decimal places : " + round(3.1415926535,3));
+                System.out.println("Round 3.1415926535 to 4 decimal places : " + round(3.1415926535,4));
+                System.out.println("Round 3.1415926535 to 5 decimal places : " + round(3.1415926535,5));
+                System.out.println("Round 3.1415926535 to 6 decimal places : " + round(3.1415926535,6));
+
+                System.out.println("----------------------------------------------");
                 break;
 
 
